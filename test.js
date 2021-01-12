@@ -145,7 +145,7 @@ contract('AuctionContract', function (accounts) {
       /**********
       TASK 16: call winners function from accounts[0] to get the winner of item id 1
       ***********/
-      return auctionInstance.winners(1); /*<CODE HERE>*/
+      return auctionInstance.winners(1, { from: accounts[0] }); /*<CODE HERE>*/
     }).then(function(result) {
       /**********
       TASK 17:  assert to see if the winner address is not the default address
@@ -158,7 +158,7 @@ contract('AuctionContract', function (accounts) {
       /**********
       TASK 18: Call winners function from account 3 to get the winner of item id 2
       ***********/
-      return auctionInstance.winners(2); /*<CODE HERE>*/
+      return auctionInstance.winners(2, { from: accounts[3] }); /*<CODE HERE>*/
     }).then(function(result) {
       /**********
       TASK 19:  assert to see if the winner address is not the default address
